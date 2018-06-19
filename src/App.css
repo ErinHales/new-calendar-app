@@ -1,28 +1,319 @@
-.App {
-  text-align: center;
-}
+/* Themes:
+Summer Peach:
+#99B898 = green,
+#FECEA8 = tan,
+#FF847C = light peach,
+#E84A5F = dark peach,
+#2A363B = almost black 
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+Lavendar Sunset:
+#D3ADD1 another purple, leave this one out?,
+#8C759F,
+#222222,
+#F4B8C7,
+#FACDBE = orange?,
+#FEEEC8 = yellow?
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+Pastel:
+#D2E0F2 = purple,
+#E3FFFB = blue,
+#D6FFD9 = green,
+#FBECE9 = pink,
+#FEFFE1 = yellow,
 
-.App-title {
-  font-size: 1.5em;
-}
+Business:
+#32292F = black,
+#99E1D9 = light blue,
+#F0F7F4 = white,
+#70ABAF = dark blue,
+#705D56 = brown
+*/
 
-.App-intro {
-  font-size: large;
-}
+  * {
+    outline: none;
+  }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  /* header */
+  
+  .top {
+    background-color: var(--main-color);
+  }
+
+  .header {
+    background-color: var(--main-color);
+    height: 90px;
+  }
+  
+  .headTitle {
+    color: var(--color-six);
+    font-size: 50px;
+    position: relative;
+    float: left;
+    clear: both;
+    margin: 20px;
+  }
+  
+  .menu button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-six);
+    font-size: 20px;
+  }
+  
+  .menu {
+    position: absolute;
+    right: 0px;
+    padding: 7px;
+    text-align: right;
+    margin-right: 60px;
+  }
+  
+  button:hover {
+    font-size: 24px;
+  }
+
+  /* months */
+  
+  .June,
+  .November,
+  .April {
+    background-color: var(--color-two);
+  }
+  
+  .July,
+  .December,
+  .May {
+    background-color: var(--color-three);
+  }
+  
+  .August,
+  .January {
+    background-color: var(--color-four);
+  }
+  
+  .September,
+  .February {
+    background-color: var(--color-five);
+  }
+  
+  .October,
+  .March {
+    background-color: var(--main-color);
+  }
+  
+  .monthTitle {
+    color: var(--color-six);
+    padding: 5px 5px 10px 20px;
+    font-size: 50px;
+  }
+  
+  .months {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+
+
+
+
+  /* days in months */
+  
+  .days {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dates {
+    display: grid;
+    background-color: rgba(255,255,255,0.5);
+    grid-template-columns: repeat(7, 1fr);
+    width: 500;
+    height: 300;
+    padding-bottom: 70px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .day {
+    height: 63px;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-left: 5px;
+    overflow: hidden;
+  }
+  
+  .Monday {
+    grid-column-start: 1;
+  }
+  
+  .Tuesday {
+    grid-column-start: 2;
+  }
+  
+  .Wednesday {
+    grid-column-start: 3;
+  }
+  
+  .Thursday {
+    grid-column-start: 4;
+  }
+  
+  .Friday {
+    grid-column-start: 5;
+  }
+  
+  .Saturday {
+    grid-column-start: 6;
+  }
+  
+  .Sunday {
+    grid-column-start: 7;
+  }
+
+
+
+  /* editing page */
+
+
+  .editPage {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .editPage input {
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+  }
+
+  .editPage h2 {
+    color: white;
+    font-size: 30px;
+    display: inline;
+  }
+
+
+  .Submit {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    width: 80px;
+    height: 40px;
+  }
+
+  .Submit:hover {
+    height: 45px;
+    font-size: 15px;
+  }
+
+  /* style themes drop down */
+  .themes {
+    color: var(--color-six);
+    background-color: var(--main-color);
+    width: 200px;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+    text-align: right;
+    padding-right: 65px;
+  }
+
+  .themes > button {
+    background-color: transparent;
+    color: var(--color-six);
+    font-size: 20px;
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .themes > button:hover {
+    font-size: 24px;
+  }
+
+  /* event buttons */
+
+  .event {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+  }
+
+  .event:hover{
+    font-size: 13px;
+  }
+
+  /* edit popup */
+
+  .fadeOut {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+  }
+
+  .editBox {
+    position: fixed;
+    top: 25vh;
+    width: 40vw;
+    margin-left: 30vw;
+    background-color: var(--main-color);
+    padding: 10px;
+  }
+
+  .editButton,
+  .exitButton,
+  .deleteButton {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    margin: 5px;
+    float: right;
+  }
+
+  .editButton:hover,
+  .exitButton:hover,
+  .deleteButton:hover {
+    font-size: 36px;
+    margin: 2px;
+  }
+
+  .editBox h2 {
+    margin: 10px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .editBox div {
+    margin: 10px;
+    font-size: 22px;
+  }
+
+  .editingInput,
+  .editingSubmit {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .editingSubmit {
+    margin-top: 20px;
+    font-size: 22px;
+  }
